@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                 CircleAvatar(
                   radius: 30,
                   backgroundImage:
-                  AssetImage("assets/avatar.png"), // add avatar image
+                      AssetImage("assets/avatar.png"), // add avatar image
                 ),
                 const SizedBox(width: 12),
                 const Expanded(
@@ -61,9 +61,9 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "Your Stars",
+                    "⭐ Your Stars",
                     style:
-                    TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "12 Stars",
