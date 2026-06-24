@@ -1,38 +1,36 @@
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
-import 'authentication_screen.dart';
-import 'signup_screen.dart';
-import 'home_screen.dart';
 
 void main() {
-  runApp(const KidsIslamicHubApp());
+  runApp(const MyApp());
 }
 
-class KidsIslamicHubApp extends StatelessWidget {
-  const KidsIslamicHubApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-
       title: 'Kids Islamic Hub',
-
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.teal,
-        fontFamily: 'Poppins',
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF2E7D32),
+        ),
       ),
-
-      /// FIRST SCREEN
-      initialRoute: '/',
-
-      /// ROUTES NAVIGATION
-      routes: {
-        '/': (context) => const SplashScreen(),
-        '/auth': (context) => const AuthScreen(),
-        '/signup': (context) => const SignupScreen(),
-        '/home': (context) => const HomeScreen(),
-      },
+      home: const Scaffold(
+        backgroundColor: Color(0xFF2E7D32),
+        body: Center(
+          child: Text(
+            '📖 Kids Islamic Hub',
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
